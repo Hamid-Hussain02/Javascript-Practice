@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript String</h1>
+
+    <p>JavaScript strings are for storing and manipulating text.</p>
+    <p>A JavaScript string is zero or more characters written inside quotes.</p>
+
+    <h4>String Methods</h4>
+    <span>Result: </span><span id="demo"></span>
+    <br>
+    <h4>Description</h4>
+    <p id="description"></p>
+
+
+    <button type="button" onclick="stringLength()">Get String Length</button>
+    <button type="button" onclick="characterAt()">Char at 0</button>
+    <button type="button" onclick="charCodeAt()">Char code at 0</button>
+    <button type="button" onclick="indexOf()">Index Of</button>
+    <button type="button" onclick="concat()">Concat</button>
+    <button type="button" onclick="lastIndexOf()">Last Index Of</button>
+    <button type="button" onclick="localeCompare()">Locale Compare</button>
+    <button type="button" onclick="matchString()">Match</button>
+    <button type="button" onclick="replace()">Replace</button>
+    <button type="button" onclick="search()">Search</button>
+    <button type="button" onclick="slice()">Slice</button>
+    <button type="button" onclick="split()">Split</button>
+    <button type="button" onclick="substr()">Substr</button>
+    <button type="button" onclick="toLowerCase()">To Lower Case</button>
+    <button type="button" onclick="toUpperCase()">To Upper Case</button>
+    <script>
+        let description
+        function stringLength(){
+            let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            description="To find the length of a string, use the built-in length property:"
+            document.getElementById("demo").innerHTML = text.length;
+            document.getElementById("description").innerHTML = description;
+        }
+        function characterAt(){
+            let text = "HELLO WORLD";
+            description="Returns the character at a specified index (position)"
+            let letter = text.charAt(0);
+            document.getElementById("demo").innerHTML = letter;
+            document.getElementById("description").innerHTML = description;
+        }
+        function charCodeAt(){
+            let text = "HELLO WORLD";
+            let code = text.charCodeAt(0);
+            description="Returns the Unicode of the character at a specified index"
+            document.getElementById("demo").innerHTML = code;
+            document.getElementById("description").innerHTML = description;
+        }
+        function indexOf(){
+            let text = "Hello world, welcome to the universe.";
+            let result = text.indexOf("welcome");
+            description="Returns the index (position) of the first occurrence of a value in a string"
+            document.getElementById("demo").innerHTML = result;
+            document.getElementById("description").innerHTML = description;
+        }
+        function concat(){
+            let text1 = "sea";
+            let text2 = "food";
+            description="Returns two or more joined strings"
+            let result = text1.concat(text2);
+            document.getElementById("demo").innerHTML = result;
+            document.getElementById("description").innerHTML = description;
+        }
+        function lastIndexOf(){
+            let text = "Hello planet earth, you are a great planet.";
+            let result = text.lastIndexOf("planet");
+            description="Returns the index (position) of the last occurrence of a value in a string"
+            document.getElementById("demo").innerHTML = result;
+            document.getElementById("description").innerHTML = description;
+        }
+        function localeCompare(){
+            let text1 = "ab";
+            let text2 = "cd";
+            let description ='The localeCompare() method compares two strings in the current locale<br>The localeCompare() method returns sort order -1, 1, or 0 (for before, after, or equal).<br>The current locale is based on the language settings of the browser.'
+            let result = text1.localeCompare(text2);
+            document.getElementById("demo").innerHTML = result;
+            document.getElementById("description").innerHTML = description;    
+        }
+        function matchString(){
+            let text = "The rain in SPAIN stays mainly in the plain"
+            let description="The match() method matches a string against a regular expression **<br>The match() method returns an array with the matches.<br>The match() method returns null if no match is found."
+            let result = text.match("ain");
+            document.getElementById("demo").innerHTML = result;
+            document.getElementById("description").innerHTML = description;
+        }
+        function replace(){
+            let text = "Visit Microsoft!";
+            description="Searches a string for a value, or a regular expression, and returns a string where the values are replaced" 
+            document.getElementById("demo").innerHTML = text.replace("Microsoft", "W3Schools");
+            document.getElementById("description").innerHTML = description; 
+        }
+        function search(){
+            let text = "Mr. Blue has a blue house"
+            let position = text.search("Blue");
+            description ="Searches a string for a value, or regular expression, and returns the index (position) of the match"
+
+            document.getElementById("demo").innerHTML = position;
+            document.getElementById("description").innerHTML = description;
+        }
+        function slice(){
+            let text = "How are you doing today?";
+            description="Extracts a part of a string and returns a new string"
+            const myArray = text.split(" ");
+
+            document.getElementById("demo").innerHTML = myArray;
+            document.getElementById("description").innerHTML = description;
+        }
+        function split(){
+            let text = "How are you doing today?";
+            description="Splits a string into an array of substrings"
+            const myArray = text.split(" ");
+
+            document.getElementById("demo").innerHTML = myArray;
+            document.getElementById("description").innerHTML = description;  
+        }
+        function substr(){
+            let text = "Hello world!";
+            description="Extracts a number of characters from a string, from a start index (position)"
+            let result = text.substr(1, 4);
+
+            document.getElementById("demo").innerHTML = result;
+            document.getElementById("description").innerHTML = description;
+        }
+        function toLowerCase(){
+            let text = "Hello World!";
+            description="Returns a string converted to lowercase letters, using the host's locale"
+            let result = text.toLocaleLowerCase();
+
+            document.getElementById("demo").innerHTML = result;
+            document.getElementById("description").innerHTML = description; 
+        }
+        function toUpperCase(){
+            let text = "Hello World!";
+            description="Returns a string converted to uppercase letters, using the host's locale"
+            let result = text.toLocaleUpperCase();
+
+            document.getElementById("demo").innerHTML = result;
+            document.getElementById("description").innerHTML = description;
+        }
+
+    </script>
+</body>
+</html>
