@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Date Methods</h1>
+
+    <p>The Date object is used to work with dates and times.</p>
+
+    <h4>Date Methods</h4>
+    <span>Result: </span><span id="demo"></span>
+    <br>
+    <!-- <h4>Description</h4>
+    <p id="description"></p> -->
+
+
+    <br>
+    <br>
+
+    <button type="button" onclick="getDate()">Get Date</button>
+    <button type="button" onclick="getDay()">Get Day</button>
+    <button type="button" onclick="getFullYear()">Get Full Year</button>
+    <button type="button" onclick="getMonths()">Get Months</button>
+    <button type="button" onclick="getSeconds()">Get Seconds</button>
+    <button type="button" onclick="getUTCDate()">Get UTC Date</button>
+    <button type="button" onclick="getUTCMinutes()">Get UTC Minutes</button>
+    <button type="button" onclick="parse()">Parse Date</button>
+
+    <script>
+        function getDate(){
+            const d = new Date();
+            let day = d.getDate();
+            document.getElementById("demo").innerHTML = day;
+        }
+        function getDay(){
+            const d = new Date();
+            let day = d.getDay()
+            document.getElementById("demo").innerHTML = day;
+        }
+        function getFullYear(){
+            const d = new Date();
+            document.getElementById("demo").innerHTML = d.getFullYear();
+        }
+        function getMonths(){
+            const d = new Date();
+            document.getElementById("demo").innerHTML = d.getMonth() + 1;
+        }
+        function getSeconds(){
+            const d = new Date();
+            document.getElementById("demo").innerHTML = d.getSeconds();
+        }
+        function getUTCDate(){
+            const d = new Date();
+            let day = d.getUTCDate();
+            document.getElementById("demo").innerHTML = day;
+        }
+        function getUTCMinutes(){
+            const d = new Date();
+let minutes = d.getUTCMinutes();
+document.getElementById("demo").innerHTML = minutes;
+        }
+        function parse(){
+            let ms = Date.parse("March 21, 2012");
+document.getElementById("demo").innerHTML = ms;
+        }
+    </script>
+</body>
+</html>
