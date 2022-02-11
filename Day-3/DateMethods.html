@@ -13,9 +13,6 @@
 
     <h4>Date Methods</h4>
     <span>Result: </span><span id="demo"></span>
-    <br>
-    <!-- <h4>Description</h4>
-    <p id="description"></p> -->
 
 
     <br>
@@ -29,6 +26,8 @@
     <button type="button" onclick="getUTCDate()">Get UTC Date</button>
     <button type="button" onclick="getUTCMinutes()">Get UTC Minutes</button>
     <button type="button" onclick="parse()">Parse Date</button>
+    <button type="button" onclick="timeZoneoffset()">timeZoneOffSet</button>
+    <button type="button" onclick="DateToString()">To String</button>
 
     <script>
         function getDate(){
@@ -66,6 +65,16 @@ document.getElementById("demo").innerHTML = minutes;
         function parse(){
             let ms = Date.parse("March 21, 2012");
 document.getElementById("demo").innerHTML = ms;
+        }
+        function timeZoneOffSet(){
+            const d = new Date();
+let diff = d.getTimezoneOffset();
+document.getElementById("demo").innerHTML = diff;
+        }
+        function DateToString(){
+            const d = new Date();
+let text = d.toString();
+document.getElementById("demo").innerHTML = text;
         }
     </script>
 </body>
