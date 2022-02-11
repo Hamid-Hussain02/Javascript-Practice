@@ -59,22 +59,22 @@
         }
         function getUTCMinutes(){
             const d = new Date();
-let minutes = d.getUTCMinutes();
-document.getElementById("demo").innerHTML = minutes;
+            let minutes = d.getUTCMinutes();
+            document.getElementById("demo").innerHTML = minutes;
         }
         function parse(){
             let ms = Date.parse("March 21, 2012");
-document.getElementById("demo").innerHTML = ms;
+            document.getElementById("demo").innerHTML = ms;
         }
         function timeZoneOffSet(){
             const d = new Date();
-let diff = d.getTimezoneOffset();
-document.getElementById("demo").innerHTML = diff;
+            let diff = d.getTimezoneOffset();
+            document.getElementById("demo").innerHTML = diff;
         }
         function DateToString(){
             const d = new Date();
-let text = d.toString();
-document.getElementById("demo").innerHTML = text;
+            let text = d.toString();
+            document.getElementById("demo").innerHTML = text;
         }
     </script>
 </body>
