@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript RegExp Methods</h1>
+
+    <p>A regular expression is a pattern of characters.
+
+        The pattern is used to do pattern-matching "search-and-replace" functions on text.
+        
+        In JavaScript, a RegExp Object is a pattern with Properties and Methods.</p>
+
+    <h4>Math Methods</h4>
+    <span>Result: </span><span id="demo"></span>
+
+
+    <br>
+    <br>
+
+    <button type="button" onclick="global()">Global</button>
+    <button type="button" onclick="exec()">Exec</button>
+    <button type="button" onclick="test()">Test</button>
+    <button type="button" onclick="RexExptoString()">To String</button>
+    
+    
+
+    <script>
+        function global(){
+            let pattern = /W3S/g;
+            let result = pattern.global;
+
+            document.getElementById("demo").innerHTML = result;
+        }
+        function exec(){
+            let text = "The best things in life are free";
+            let result = /e/.exec(text);
+            document.getElementById("demo").innerHTML = result;
+        }
+        function test(){
+            let text = "The best things in life are free";
+            let pattern = /e/;
+            let result = pattern.test(text);
+
+            document.getElementById("demo").innerHTML = result;
+        }
+        function RexExptoString(){
+            let pattern = new RegExp("Hello World", "g");
+            let text = pattern.toString();
+
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+</body>
+</html>
